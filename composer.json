@@ -1,0 +1,48 @@
+{
+    "name": "studioespresso/craft-dumper",
+    "description": "Bringing larapack/dd to Craft 3",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "dumper"
+    ],
+    "support": {
+        "docs": "https://github.com/studioespresso/craft3-dumper/blob/master/README.md",
+        "issues": "https://github.com/studioespresso/craft3-dumper/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Studio Espresso",
+            "homepage": "https://studioespresso.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.29",
+        "larapack/dd": ">=1.1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "studioespresso\\craftdumper\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Dumper",
+        "handle": "dumper",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/studioespresso/craft3-dumper/master/CHANGELOG.md",
+        "class": "studioespresso\\craftdumper\\CraftDumper"
+    }
+}
