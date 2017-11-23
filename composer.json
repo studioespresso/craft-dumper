@@ -2,7 +2,7 @@
     "name": "studioespresso/craft-dumper",
     "description": "Bringing larapack/dd to Craft 3",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "keywords": [
         "craft",
         "cms",
@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "~3.0.0-beta.29",
+        "craftcms/cms": "dev-release/3.0.0-RC1",
         "larapack/dd": ">=1.1"
     },
     "repositories": [
