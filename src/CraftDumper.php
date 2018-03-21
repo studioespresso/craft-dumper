@@ -24,7 +24,9 @@ class CraftDumper extends \craft\base\Plugin
 	public static $plugin;
 
 	public function init() {
-		self::$plugin = $this;
+        parent::init();
+
+        self::$plugin = $this;
 		Craft::$app->view->twig->addExtension( new DumperExtension() );
 
 	}
