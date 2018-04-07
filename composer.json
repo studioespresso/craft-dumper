@@ -2,6 +2,7 @@
     "name": "studioespresso/craft-dumper",
     "description": "Bringing larapack/dd to Craft 3",
     "type": "craft-plugin",
+    "version": "1.2.0",
     "keywords": [
         "craft",
         "cms",

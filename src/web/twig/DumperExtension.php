@@ -48,20 +48,30 @@ class DumperExtension extends Twig_Extension
 	/**
 	 * @param $variable
 	 */
-	public function d($variable)
+	public function d()
 	{
-
-		return d($variable);
+		foreach ( func_get_args() as $item ) {
+			echo d( $item );
+		}
 	}
 
 
 	/**
 	 * @param $variable
 	 */
-	public function dd($variable)
+	public function dd()
 	{
+		$i   = 0;
+		$len = count( func_get_args() );
+		foreach ( func_get_args() as $item ) {
+			if ( $i == $len - 1 ) {
+				echo dd( $item );
+			} else {
+				echo d( $item );
+			}
+			$i ++;
+		}
 
-		return dd($variable);
 	}
 
 }
