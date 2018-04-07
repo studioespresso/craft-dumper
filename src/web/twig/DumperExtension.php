@@ -50,8 +50,13 @@ class DumperExtension extends Twig_Extension
 	 */
 	public function d($variable)
 	{
-
-		return d($variable);
+		if(is_array($variable)) {
+			foreach ($variable as $item) {
+				echo  d($item);
+			}
+		} else {
+			echo d($variable);
+		}
 	}
 
 
@@ -60,8 +65,20 @@ class DumperExtension extends Twig_Extension
 	 */
 	public function dd($variable)
 	{
-
-		return dd($variable);
+		if(is_array($variable)) {
+			$i = 0;
+			$len = count($variable);
+			foreach ($variable as $item) {
+				 if ($i == $len - 1) {
+					echo dd($item);
+				} else {
+					echo d($item);
+				}
+				$i++;
+			}
+		} else {
+			echo dd($variable);
+		}
 	}
 
 }
