@@ -53,6 +53,7 @@ class DumperExtension extends Twig_Extension
 		foreach ( func_get_args() as $item ) {
 			echo d( $item );
 		}
+        echo '<style>pre.sf-dump { z-index: 0; !important} </style>';
 	}
 
 
@@ -71,7 +72,7 @@ class DumperExtension extends Twig_Extension
 			}
 			$i ++;
 		}
-
-	}
+        echo '<style>pre.sf-dump { z-index: 0; !important} </style>';
+    }
 
 }
