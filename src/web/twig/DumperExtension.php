@@ -118,6 +118,6 @@ class DumperExtension extends Twig_Extension
 
         VarDumper::dump($vars);
 
-        return ob_get_clean();
+        echo ob_get_clean();
     }
 }
