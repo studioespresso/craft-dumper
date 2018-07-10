@@ -1,6 +1,8 @@
 # Changelog
 
-## 1.2.1 - 2018-05-11
+## 1.3.0 - 2018-07-10
+### Added
+- the plugin now also handles the Craft's dump function ([#8](https://github.com/studioespresso/craft3-dumper/pull/8), via [bertoost](https://github.com/bertoost))
 
 ## 1.2.0 - 2018-04-07
 ### Fixed
