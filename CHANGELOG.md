@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.1 - 2018-07-10
+### Fixed
+- Fixes a bug where the plugin may cause Twig to be loaded before it should be ([#9](https://github.com/studioespresso/craft3-dumper/pull/9), via [brandonkelly](https://github.com/brandonkelly))
+
+
 ## 1.3.0 - 2018-07-10
 ### Added
 - the plugin now also handles the Craft's dump function ([#8](https://github.com/studioespresso/craft3-dumper/pull/8), via [bertoost](https://github.com/bertoost))
