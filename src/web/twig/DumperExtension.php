@@ -56,7 +56,7 @@ class DumperExtension extends Twig_Extension
                 'needs_environment' => false,
                 'debug' => true,
             ]),
-            new Twig_Function('dump', [$this, 'dump'], [
+            new TwigFunction('dump', [$this, 'dump'], [
                 'is_safe'           => $isDumpOutputHtmlSafe ? ['html'] : [],
                 'needs_context'     => true,
                 'needs_environment' => true,
