@@ -3,9 +3,8 @@
 namespace studioespresso\craftdumper\web\twig;
 
 use Symfony\Component\VarDumper\VarDumper;
+use Twig\TwigFunction;
 use Twig_Extension;
-use Twig_SimpleFunction;
-use Twig_Function;
 
 /**
  * Plugin represents the Craft Dumper Twig Extension.
@@ -50,9 +49,14 @@ class DumperExtension extends Twig_Extension
             || 'cli' === PHP_SAPI;
 
 		return [
-			new Twig_SimpleFunction('d', [$this, 'd']),
-			new Twig_SimpleFunction('dd', [$this, 'dd']),
-            new Twig_Function('dump', [$this, 'dump'], [
+			new TwigFunction('d', [$this, 'd']),
+			new TwigFunction('dd', [$this, 'dd'], [
+                'is_safe' => $isDumpOutputHtmlSafe ? ['html'] : [],
+                'needs_context' => false,
+                'needs_environment' => false,
+                'debug' => true,
+            ]),
+            new TwigFunction('dump', [$this, 'dump'], [
                 'is_safe'           => $isDumpOutputHtmlSafe ? ['html'] : [],
                 'needs_context'     => true,
                 'needs_environment' => true,

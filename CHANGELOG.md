@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+
+## Fixed
+- Due to an update to `twig/twig` an Craft requiring that version we had to bump to twig version for this to keep the dump&die/dd function working. [#10](https://github.com/studioespresso/craft3-dumper/issues/10)
+
+
 ## 1.3.1 - 2018-07-10
 ### Fixed
 - Fixes a bug where the plugin may cause Twig to be loaded before it should be ([#9](https://github.com/studioespresso/craft3-dumper/pull/9), via [brandonkelly](https://github.com/brandonkelly))
