@@ -22,8 +22,9 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1",
-        "larapack/dd": ">=1.1"
+        "craftcms/cms": "^3.1.29",
+        "larapack/dd": ">=1.1",
+        "twig/twig": ">=2.11.3 <3.0.0"
     },
     "repositories": [
         {
