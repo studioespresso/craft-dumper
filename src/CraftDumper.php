@@ -21,13 +21,25 @@ use studioespresso\craftdumper\web\twig\DumperExtension;
 class CraftDumper extends \craft\base\Plugin
 {
 
-	public static $plugin;
+    public static $plugin;
 
-	public function init() {
+    public function init()
+    {
+        dump();
         parent::init();
-
         self::$plugin = $this;
-		Craft::$app->view->registerTwigExtension( new DumperExtension() );
+        Craft::$app->view->registerTwigExtension(new DumperExtension());
 
-	}
+    }
+
+
+}
+
+// Register d() as an alias for dump()
+if (!function_exists('d')) {
+    function d()
+    {
+        $args = func_get_args();
+        call_user_func_array('dump', $args);
+    }
 }
