@@ -5,8 +5,8 @@
 
 namespace studioespresso\craftdumper;
 
-
 use Craft;
+use craft\base\Plugin;
 use studioespresso\craftdumper\web\twig\DumperExtension;
 
 /**
@@ -18,27 +18,19 @@ use studioespresso\craftdumper\web\twig\DumperExtension;
  * @package Craft Dumper
  * @since  1.0
  */
-class CraftDumper extends \craft\base\Plugin
+
+class CraftDumper extends Plugin
 {
 
+    /**
+     * @var Plugin
+     */
     public static $plugin;
 
-    public function init()
+    public function init(): void
     {
         parent::init();
         self::$plugin = $this;
         Craft::$app->view->registerTwigExtension(new DumperExtension());
-
-    }
-
-
-}
-
-// Register d() as an alias for dump()
-if (!function_exists('d')) {
-    function d()
-    {
-        $args = func_get_args();
-        call_user_func_array('dump', $args);
     }
 }
