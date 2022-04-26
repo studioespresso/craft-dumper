@@ -1,8 +1,17 @@
 # Changelog
 
-## 2.0.0
+## 3.0.0
+### Added
+- Craft 4 🚀
 
-## Fixed
+## 3.0.0-beta.1
+
+### Added
+- Craft 4 compatibility
+- The plugin now uses symfony/vardumper (which comes with Craft) instead of larapack/dd
+
+## 2.0.0
+### Fixed
 - Due to an update to `twig/twig` an Craft requiring that version we had to bump to twig version for this to keep the dump&die/dd function working. [#10](https://github.com/studioespresso/craft3-dumper/issues/10)
 
 
