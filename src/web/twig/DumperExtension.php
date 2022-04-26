@@ -3,6 +3,7 @@
 namespace studioespresso\craftdumper\web\twig;
 
 use Symfony\Component\VarDumper\VarDumper;
+use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 use Twig_Extension;
 
@@ -16,7 +17,7 @@ use Twig_Extension;
  * @since  1.0
  */
 
-class DumperExtension extends Twig_Extension
+class DumperExtension extends AbstractExtension
 {
 	// Public Methods
 	// =========================================================================
@@ -41,7 +42,6 @@ class DumperExtension extends Twig_Extension
 	{
         // dump is safe if var_dump is overridden by xdebug
         $isDumpOutputHtmlSafe = extension_loaded('xdebug')
-            // false means that it was not set (and the default is on) or it explicitly enabled
             && (false === ini_get('xdebug.overload_var_dump') || ini_get('xdebug.overload_var_dump'))
             // false means that it was not set (and the default is on) or it explicitly enabled
             // xdebug.overload_var_dump produces HTML only when html_errors is also enabled
@@ -70,7 +70,7 @@ class DumperExtension extends Twig_Extension
 	public function d()
 	{
 		foreach ( func_get_args() as $item ) {
-			echo d( $item );
+			echo VarDumper::dump( $item );
 		}
         echo '<style>pre.sf-dump { z-index: 0; !important} </style>';
 	}
@@ -87,7 +87,7 @@ class DumperExtension extends Twig_Extension
 			if ( $i == $len - 1 ) {
 				echo dd( $item );
 			} else {
-				echo d( $item );
+				echo VarDumper::dump( $item );
 			}
 			$i ++;
 		}
@@ -103,12 +103,8 @@ class DumperExtension extends Twig_Extension
      *
      * @return string|null
      */
-    public function dump(\Twig_Environment $env, $context, ...$vars)
+    public function dump()
     {
-        if (!$env->isDebug()) {
-            return null;
-        }
-
         if (!$vars) {
             $vars = [];
             foreach ($context as $key => $value) {
