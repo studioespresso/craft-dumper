@@ -1,4 +1,9 @@
 # Changelog
+
+## 3.0.0
+### Added
+- Craft 4 🚀
+
 ## 3.0.0-beta.1
 
 ### Added
