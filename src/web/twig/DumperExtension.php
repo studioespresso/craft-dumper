@@ -3,6 +3,7 @@
 namespace studioespresso\craftdumper\web\twig;
 
 use Symfony\Component\VarDumper\VarDumper;
+use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 use Twig_Extension;
@@ -103,7 +104,7 @@ class DumperExtension extends AbstractExtension
      *
      * @return string|null
      */
-    public function dump()
+    public function dump(Environment $env, array $context, ...$vars)
     {
         if (!$vars) {
             $vars = [];
