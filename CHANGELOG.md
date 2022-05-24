@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1
+### Fixed
+- Fixed an error with dump() ([#13](https://github.com/studioespresso/craft3-dumper/issues/13))
+
 ## 3.0.0
 ### Added
 - Craft 4 🚀
