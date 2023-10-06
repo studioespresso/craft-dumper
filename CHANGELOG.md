@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.0-alpha
+### Added
+- Support for Craft 5.0.0-alpha
+
 ## 3.0.1
 ### Fixed
 - Fixed an error with dump() ([#13](https://github.com/studioespresso/craft3-dumper/issues/13))
