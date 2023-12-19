@@ -2,7 +2,7 @@
     "name": "studioespresso/craft-dumper",
     "description": "Bringing larapack/dd to Craft CMS",
     "type": "craft-plugin",
-    "version": "5.0.0-alpha",
+    "version": "5.0.0-alpha.2",
     "keywords": [
         "craft",
         "cms",
@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^4.0.0-RC1|5.0.x-dev as 5.0.0-alpha"
+        "craftcms/cms": "^4.0.0|^5.0.0-alpha"
     },
     "repositories": [
         {

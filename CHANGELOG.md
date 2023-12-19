@@ -1,6 +1,10 @@
 # Changelog
 
-## 5.0.0-alpha
+## 5.0.0-alpha.2 - 2023-12-19
+### Fixed
+- Fixed Craft alpha dependency
+
+## 5.0.0-alpha.1
 ### Added
 - Support for Craft 5.0.0-alpha
 
