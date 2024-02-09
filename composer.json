@@ -1,8 +1,8 @@
 {
     "name": "studioespresso/craft-dumper",
-    "description": "Bringing larapack/dd to Craft CMS",
+    "description": "Bringing symfony/VarDumper to Craft CMS",
     "type": "craft-plugin",
-    "version": "5.0.0-alpha.2",
+    "version": "5.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -11,18 +11,27 @@
         "dumper"
     ],
     "support": {
-        "docs": "https://github.com/studioespresso/craft3-dumper/blob/master/README.md",
-        "issues": "https://github.com/studioespresso/craft3-dumper/issues"
+        "docs": "https://github.com/studioespresso/craft-dumper/blob/master/README.md",
+        "issues": "https://github.com/studioespresso/craft-dumper/issues"
     },
     "license": "MIT",
     "authors": [
         {
             "name": "Studio Espresso",
-            "homepage": "https://studioespresso.dev"
+            "homepage": "https://www.studioespresso.co"
         }
     ],
     "require": {
         "craftcms/cms": "^4.0.0|^5.0.0-alpha"
+    },
+    "require-dev": {
+        "craftcms/ecs": "dev-main",
+        "craftcms/phpstan": "dev-main"
+    },
+    "scripts": {
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --ansi --fix",
+        "phpstan": "phpstan --memory-limit=1G"
     },
     "repositories": [
         {
@@ -42,7 +51,13 @@
         "schemaVersion": "1.0.0",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/studioespresso/craft3-dumper/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/studioespresso/craft-dumper/master/CHANGELOG.md",
         "class": "studioespresso\\craftdumper\\CraftDumper"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }

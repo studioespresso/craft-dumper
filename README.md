@@ -1,10 +1,10 @@
-# Dumper plugin for Craft CMS 3.x
+# Dumper for Craft CMS
 
-Bringing larapack/dd to Craft 3
+Easy dump & "dump&die" functions for Twig.
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.29 or later.
+This plugin works with Craft CMS 3, 4 or 5. 
 
 ## Installation
 
@@ -22,7 +22,7 @@ To install the plugin, follow these instructions.
 
 ## Using Dumper
 
-When you install the plugin, you'll be able to use larapack/dd in your Twig templates like this:
+When you install the plugin, you'll be able to use `` Symfony\VarDumper`` in your Twig templates like this:
 
     {{ d(entry) }}
     
@@ -33,4 +33,4 @@ Or you can "dump and die"
 Works on strings, arrays, object, etc.
 
 
-###### Brought to you by [Studio Espresso](https://studioespresso.co)
+###### Brought to you by [Studio Espresso](https://www.studioespresso.co)

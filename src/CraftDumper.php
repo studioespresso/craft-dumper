@@ -21,7 +21,6 @@ use studioespresso\craftdumper\web\twig\DumperExtension;
 
 class CraftDumper extends Plugin
 {
-
     /**
      * @var Plugin
      */
