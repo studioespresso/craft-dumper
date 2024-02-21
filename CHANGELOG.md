@@ -1,5 +1,13 @@
 # Changelog
 
+## 5.0.1 - 2024-02-21
+### Added
+- New icon
+
+## 5.0.0 - 2024-02-09
+### Added
+- Full Craft 5 support
+
 ## 5.0.0-alpha.2 - 2023-12-19
 ### Fixed
 - Fixed Craft alpha dependency
