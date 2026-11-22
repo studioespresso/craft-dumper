@@ -1,5 +1,20 @@
 # Changelog
 
+## 6.0.0-beta.2 - Unreleased
+### Changed
+- Requires Craft CMS 6.0.0-beta.2
+- `DumperExtension` moved to `studioespresso\craftdumper\Twig`
+- Added `UPGRADE.md`
+
+## 6.0.0-alpha.1 - 2026-10-19
+### Added
+- Craft 6 support
+- `d()` is now also available as a PHP helper
+
+### Changed
+- `dump()` and `dd()` are no longer overridden, Craft 6 ships both
+- Moved to Laravel Pint & Larastan
+
 ## 5.0.1 - 2024-02-21
 ### Added
 - New icon

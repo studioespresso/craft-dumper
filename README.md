@@ -4,7 +4,7 @@ Easy dump & "dump&die" functions for Twig.
 
 ## Requirements
 
-This plugin works with Craft CMS 3, 4 or 5. 
+This plugin requires Craft CMS 6. Upgrading from Craft 5? See [UPGRADE.md](UPGRADE.md).
 
 ## Installation
 
@@ -22,7 +22,7 @@ To install the plugin, follow these instructions.
 
 ## Using Dumper
 
-When you install the plugin, you'll be able to use `` Symfony\VarDumper`` in your Twig templates like this:
+Craft 6 already ships `dump()` and `dd()`. This plugin adds `d()` as a shorthand for `dump()` in your Twig templates:
 
     {{ d(entry) }}
     
@@ -30,7 +30,9 @@ Or you can "dump and die"
 
     {{ dd(entry) }}
     
-Works on strings, arrays, object, etc.
+Works on strings, arrays, object, etc. `{{ d() }}` without arguments dumps the whole template context.
+
+`d()` also works in PHP.
 
 
 ###### Brought to you by [Studio Espresso](https://www.studioespresso.co)

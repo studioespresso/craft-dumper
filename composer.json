@@ -2,7 +2,7 @@
     "name": "studioespresso/craft-dumper",
     "description": "Bringing symfony/VarDumper to Craft CMS",
     "type": "craft-plugin",
-    "version": "5.0.1",
+    "version": "6.0.0-alpha.1",
     "keywords": [
         "craft",
         "cms",
@@ -11,7 +11,7 @@
         "dumper"
     ],
     "support": {
-        "docs": "https://github.com/studioespresso/craft-dumper/blob/master/README.md",
+        "docs": "https://github.com/studioespresso/craft-dumper/blob/v6/README.md",
         "issues": "https://github.com/studioespresso/craft-dumper/issues"
     },
     "license": "MIT",
@@ -22,42 +22,41 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^4.0.0|^5.0.0-alpha"
+        "php": ">=8.5",
+        "craftcms/cms": "^6.0.0-beta.2"
     },
     "require-dev": {
-        "craftcms/ecs": "dev-main",
-        "craftcms/phpstan": "dev-main"
+        "larastan/larastan": "^3.12",
+        "laravel/pint": "^1.27",
+        "orchestra/testbench": "^11.0"
     },
     "scripts": {
-        "check-cs": "ecs check --ansi",
-        "fix-cs": "ecs check --ansi --fix",
-        "phpstan": "phpstan --memory-limit=1G"
+        "check-cs": "pint --test",
+        "fix-cs": "pint",
+        "phpstan": "phpstan --memory-limit=1G",
+        "ci": "pint && phpstan --memory-limit=1G"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
     "autoload": {
         "psr-4": {
-          "studioespresso\\craftdumper\\": "src/"
+            "studioespresso\\craftdumper\\": "src/"
         },
-        "files": ["src/helper.php"]
+        "files": [
+            "src/helper.php"
+        ]
     },
     "extra": {
-        "name": "Dumper",
         "handle": "dumper",
-        "schemaVersion": "1.0.0",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/studioespresso/craft-dumper/master/CHANGELOG.md",
+        "name": "Dumper",
+        "developer": "Studio Espresso",
+        "documentationUrl": "https://github.com/studioespresso/craft-dumper",
         "class": "studioespresso\\craftdumper\\CraftDumper"
     },
     "config": {
+        "sort-packages": true,
         "allow-plugins": {
-            "yiisoft/yii2-composer": true,
             "craftcms/plugin-installer": true
         }
-    }
+    },
+    "minimum-stability": "alpha",
+    "prefer-stable": true
 }
