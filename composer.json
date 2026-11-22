@@ -11,7 +11,7 @@
         "dumper"
     ],
     "support": {
-        "docs": "https://github.com/studioespresso/craft-dumper/blob/v6/README.md",
+        "docs": "https://github.com/studioespresso/craft-dumper/blob/develop/README.md",
         "issues": "https://github.com/studioespresso/craft-dumper/issues"
     },
     "license": "MIT",
